@@ -159,7 +159,7 @@
     (or
      (loop for c in columns
            for i from 0
-           if (equal c name)
+           if (equal (downcase c) (downcase name))
            return (progn
                     (setq num i)
                     (lambda (xs) (nth num xs))))
